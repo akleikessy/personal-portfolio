@@ -1,0 +1,61 @@
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
+}
+header{
+    background-color: rgb(145, 24, 48);
+    width: 100vw;
+    height: 4.5rem;
+    position:fixed;
+    top: 0;
+    left: 0;
+}
+#navbar{
+    display: flex;
+    float: right;
+    margin-right: 4rem;
+}
+.nav-about, .nav-work, .nav-contact{
+    height: 4.5rem;
+    line-height: 2.5;
+    text-align: center;
+    cursor: pointer;
+}
+.nav-about, .nav-work{
+    width: 100px;
+}
+.nav-contact{
+    width: 120px;
+}
+.nav-about:hover, .nav-work:hover, .nav-contact:hover{
+    background-color: darkblue;
+}
+
+.navlinks{
+    display: block;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    height: 100%;
+    width: 100%;
+}
+#welcome-section{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(31, 30, 30);
+    color:whitesmoke;
+    text-align: center;
+    margin-top: 4.5rem;
+    margin-bottom: -4.5rem;
+}
+#projects{
+    background-color: cornflowerblue;
+    color: whitesmoke;
+    width: 100vw;
+    height: 300px;
+}
