@@ -2,6 +2,11 @@
     padding: 0;
     margin: 0;
 }
+@media(prefers-reduced-motion: no-preference){
+    *{
+        scroll-behavior: smooth;
+    }
+}
 html,body{
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
@@ -19,6 +24,7 @@ header{
     display: flex;
     float: right;
     margin-right: 4rem;
+    z-index: 1;
 }
 .nav-about, .nav-work, .nav-contact{
     height: 4.5rem;
@@ -49,13 +55,153 @@ header{
     height: 100vh;
     background-color: rgb(31, 30, 30);
     color:whitesmoke;
-    text-align: center;
-    margin-top: 4.5rem;
-    margin-bottom: -4.5rem;
+    position: relative;
+    top: 4.5rem;
+    left: 0;
+    z-index: -1;
+}
+#welcome-section div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding-top: 14rem;
+}
+#welcome-section div h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+#welcome-section div p{
+    font-family: Manjari;
+    font-size: 2.5rem;
+    font-weight:normal;
+    font-style: italic;
+    color: crimson;
+    line-height: 2;
 }
 #projects{
-    background-color: cornflowerblue;
-    color: whitesmoke;
+    background-color: rgb(12, 37, 78);
     width: 100vw;
-    height: 300px;
+    padding-bottom: 8rem;
+    
+}
+#projects h2{
+    color: whitesmoke;
+    font-size: 3rem;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: underline whitesmoke;
+    text-underline-offset: 20px;
+    
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem;
+    padding-bottom: 3rem;
+}
+.project-img{
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+
+}
+.project-tile{
+    background-color: rgb(46, 44, 44);
+    color: whitesmoke;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+.wrapper-content{
+    background-color: rgb(46, 44, 44);
+    width: 100%;
+    max-width: 400px;
+    
+}
+.wrapper-content a{
+    text-decoration: none;
+    cursor:pointer;
+}
+#show-all{
+    display: block;
+    margin: 0 auto;
+    height: 2.5rem;
+    width: 8rem;
+    font-size: 1.1rem;
+    background-color: rgb(46, 44, 44);
+    color: whitesmoke;
+}
+#show-all:hover{
+    background-color: crimson;
+    color: whitesmoke;
+    font-size: 1.1rem;
+}
+.fa-brands, .fa-regular, .fa-solid{
+    font-size: 2rem;
+    color: whitesmoke;
+}
+#contact{
+    width: 100vw;
+    background-color: rgb(31, 30, 30);
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+}
+#contact h1{
+    font-size: 4.5rem;
+}
+#contact p{
+    font-family: Manjari, sans-serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: gray;
+}
+.icons-wrapper{
+    display: flex;
+    column-gap: 2rem;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.icons-wrapper a{
+    display: block;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: whitesmoke;
+}
+#footer{
+    background-color: rgb(31, 30, 30);
+    display: flex;
+    column-gap: 4rem;
+    width: 100vw;
+    heigh: 100px;
+    font-size: 1.1rem;
+    color: whitesmoke;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    border-top: 2px solid crimson;
+    justify-content: center;
+}
+@media only screen and (max-width: 1090px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 730px){
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
 }
