@@ -84,6 +84,7 @@ header{
     background-color: rgb(12, 37, 78);
     width: 100vw;
     padding-bottom: 8rem;
+    text-align: center;
     
 }
 #projects h2{
@@ -114,7 +115,7 @@ header{
 .project-tile{
     background-color: rgb(46, 44, 44);
     color: whitesmoke;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     text-align: center;
     width: 100%;
     max-width: 400px;
@@ -122,6 +123,11 @@ header{
     margin: 0;
     padding: 0;
 }
+.code{
+    color: rgb(46, 44, 44);
+    transition: color 0.3s ease-out;
+}
+
 .wrapper-content{
     background-color: rgb(46, 44, 44);
     width: 100%;
@@ -132,19 +138,26 @@ header{
     text-decoration: none;
     cursor:pointer;
 }
-#show-all{
-    display: block;
-    margin: 0 auto;
-    height: 2.5rem;
-    width: 8rem;
-    font-size: 1.1rem;
+.wrapper-content:hover .code{
+    color: #ff7f50;
+}
+.show-all{
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+    font-size: 2rem;
     background-color: rgb(46, 44, 44);
     color: whitesmoke;
+    transition: background 0.3s ease-out;
+    text-decoration: none;
 }
-#show-all:hover{
+
+.show-all:hover{
     background-color: crimson;
     color: whitesmoke;
-    font-size: 1.1rem;
+}
+.show-all:hover > i{
+        transform: translate(2px);
 }
 .fa-brands, .fa-regular, .fa-solid{
     font-size: 2rem;
@@ -179,6 +192,11 @@ header{
     font-size: 1.1rem;
     font-weight: bold;
     color: whitesmoke;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+.icons-wrapper a:hover{
+    transform:translateY(8px);
 }
 #footer{
     background-color: rgb(31, 30, 30);
@@ -192,6 +210,10 @@ header{
     padding-bottom: 4rem;
     border-top: 2px solid crimson;
     justify-content: center;
+}
+#footer a{
+    text-decoration: none;
+    color:whitesmoke;
 }
 @media only screen and (max-width: 1090px){
     .wrapper{
